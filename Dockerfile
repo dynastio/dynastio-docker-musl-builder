@@ -17,5 +17,5 @@ RUN chmod +x /usr/bin/sccache
 ENV RUSTC_WRAPPER=/usr/bin/sccache
 RUN rm -rf sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
 RUN rm -rf sccache-v0.2.15-x86_64-unknown-linux-musl
-RUN rustup install 1.63.0 && rustup default 1.63.0
+RUN rustup install beta-2022-09-20 && rustup default beta-2022-09-20
 RUN rustup target add x86_64-unknown-linux-musl
