@@ -3,7 +3,7 @@ FROM clux/muslrust:1.65.0
 
 # We need to install protobuf
 RUN apt-get update && curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip \
-    && apt-get install unzip wget \
+    && apt-get install unzip wget git \
     && yes | unzip -u protoc-3.4.0-linux-x86_64.zip -d protoc3 \
     && mv protoc3/bin/* /usr/local/bin/ \
     && mv protoc3/include/* /usr/local/include/ \
