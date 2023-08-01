@@ -1,5 +1,5 @@
 # Declare build environment
-FROM clux/muslrust:1.65.0
+FROM clux/muslrust:1.67.0
 
 # We need to install protobuf
 RUN apt-get update && curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip \
