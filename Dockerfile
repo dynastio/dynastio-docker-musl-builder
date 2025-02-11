@@ -1,5 +1,5 @@
 # Declare build environment
-FROM clux/muslrust:1.68.0
+FROM clux/muslrust:1.75.0
 
 # We need to install protobuf
 RUN apt-get update && curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip \
@@ -17,5 +17,5 @@ RUN chmod +x /usr/bin/sccache
 ENV RUSTC_WRAPPER=/usr/bin/sccache
 RUN rm -rf sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
 RUN rm -rf sccache-v0.2.15-x86_64-unknown-linux-musl
-RUN rustup install 1.68.0 && rustup default 1.68.0
+RUN rustup install 1.75.0 && rustup default 1.75.0
 RUN rustup target add x86_64-unknown-linux-musl
